@@ -5,17 +5,36 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Work Sans', sans-serif;
-  line-height: 1.6;
-  color: #333; /* color de texto base, se ajustará con la paleta */
-  background-color: #fff; /* fondo neutro inicial */
+html {
+  scroll-behavior: smooth;
 }
 
-/* ===== Jerarquía Tipográfica ===== */
+:root {
+  --bg-color: #fdfdfd;
+  --text-color: #1a1a1a;
+  --card-bg: #f3f4f6;
+  --accent-color: #ff6b6b;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== Dark Mode ===== */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f1f1f1;
+  --card-bg: #1e1e1e;
+  --accent-color: #ff8787;
+}
+
+/* ===== Tipografía ===== */
 h1, h2, h3 {
   font-family: 'Fugaz One', sans-serif;
-  color: #111; /* se ajustará después con la paleta */
+  color: var(--text-color);
 }
 
 h1 {
@@ -37,6 +56,16 @@ p {
   margin-bottom: 1rem;
 }
 
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
 /* ===== Espaciado Global ===== */
 header, section, footer {
   padding: 2rem 1rem;
@@ -56,9 +85,26 @@ header, section, footer {
 }
 
 .nav-links a {
-  text-decoration: none;
   font-weight: 600;
-  color: #333;
+}
+
+/* Botón Light/Dark Toggle */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: var(--accent-color);
+}
+
+#theme-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 /* ===== Hero ===== */
@@ -67,11 +113,26 @@ header, section, footer {
   padding: 4rem 1rem;
 }
 
+.hero-text h2 {
+  margin-bottom: 0.5rem;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--text-color);
+  transition: fill 0.3s ease;
+}
+
+.social-links svg:hover {
+  fill: var(--accent-color);
 }
 
 /* ===== Proyectos ===== */
@@ -82,14 +143,42 @@ header, section, footer {
 }
 
 .project-card {
+  background: var(--card-bg);
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-card a {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-color);
+  border-top: 1px solid #ddd;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.footer-links a {
+  font-size: 0.9rem;
 }
