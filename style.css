@@ -195,6 +195,14 @@ footer {
 }
 
 /* ===== Proyectos ===== */
+#projects {
+  text-align: center;
+}
+
+#projects h2 {
+  margin-bottom: 2rem;
+}
+
 .project-area {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -308,15 +316,22 @@ footer {
 }
 
 /* ===== Responsive para móviles (≤ 600px) ===== */
-@media (max-width: 600px) {
+@media (max-width: 725px) {
+  header {
+    position: relative;
+    padding: 1rem;
+  }
+
   .nav-bar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
 
   .menu-toggle {
     display: block;
+    z-index: 100;
   }
 
   .nav-links {
@@ -324,12 +339,16 @@ footer {
     align-items: flex-start;
     position: absolute;
     top: 100%;
+    left: 0;
     right: 0;
     background-color: var(--bg-color);
+    border: 1px solid #ddd;
+    border-top: none;
     width: 100%;
     padding: 1rem;
     display: none;
-    z-index: 10;
+    z-index: 99;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .nav-links.active {
@@ -337,11 +356,23 @@ footer {
   }
 
   .nav-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
   }
 
   #theme-toggle {
-    align-self: flex-end;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  body.dark-mode .nav-links {
+    border-color: #333;
   }
 
   .logo {
@@ -376,7 +407,7 @@ footer {
 }
 
 /* ===== Responsive para tabletas (601px a 900px) ===== */
-@media (min-width: 601px) and (max-width: 900px) {
+@media (min-width: 726px) and (max-width: 900px) {
   .hero {
     padding: 3.5rem 2rem;
     background-size: 160px;
