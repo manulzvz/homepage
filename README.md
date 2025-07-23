@@ -1,3 +1,26 @@
+# Homepage Personal - Manuel López
+
+Este es un proyecto de homepage personal desarrollado como parte del curso de HTML y CSS Avanzado de [The Odin Project](https://www.theodinproject.com/). Está inspirado en los estilos visuales de [Josh Comeau](https://www.joshwcomeau.com/) y la simplicidad de [JavaScript.info](https://javascript.info/).
+
+## ✨ Características
+
+- Diseño responsivo para móviles y tabletas.
+- Modo claro y oscuro con alternancia mediante SVG personalizado.
+- Tipografía distintiva usando **Fugaz One** para títulos y **Work Sans** para el texto.
+- Animaciones suaves (desvanecimientos, rebotes y pulsos) para una experiencia visual agradable.
+- Navegación adaptable con menú tipo hamburguesa.
+- Componentes reutilizables y código modular.
+
+## 📁 Estructura del proyecto
+
+```
+
+📦 root/
+┣ 📄 index.html
+┣ 📄 style.css
+┗ 📄 script.js
+
+```
 
 ## 🛠️ Tecnologías
 
