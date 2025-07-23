@@ -37,7 +37,7 @@
 
 ## 🚀 Deploy
 
-Puedes ver la versión en vivo del sitio próximamente en GitHub Pages o Netlify (pendiente de publicar).
+Puedes ver la versión en vivo del sitio próximamente en GitHub Pages: (https://manulzvz.github.io/homepage/).
 
 ---
 
