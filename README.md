@@ -1,6 +1,6 @@
 # Homepage Personal - Manuel López
 
-Este es un proyecto de homepage personal desarrollado como parte del curso de HTML y CSS Avanzado de [The Odin Project](https://www.theodinproject.com/). Está inspirado en los estilos visuales de [Josh Comeau](https://www.joshwcomeau.com/) y la simplicidad de [JavaScript.info](https://javascript.info/).
+ Proyecto de homepage inspirado en los estilos visuales de [Josh Comeau](https://www.joshwcomeau.com/) y la simplicidad de [JavaScript.info](https://javascript.info/).
 
 ## ✨ Características
 
